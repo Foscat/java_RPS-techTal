@@ -10,7 +10,9 @@ public class breakfastCerial {
 		Random rand =  new Random(); 
 		int compChoice = rand.nextInt(3); 
 		String rps[] = {"Rock", "Paper", "Scissors"};
-//		System.out.println(rps[compChoice]);
+
+		System.out.println("Computer answer was: " + rps[compChoice]);
+		
 		//Holder for computer answer
 		String comAn = rps[compChoice];
 		return comAn;
@@ -25,41 +27,46 @@ public class breakfastCerial {
 	}
 	
 	public static String gameLogic(){
-		String comp = getComputerAnswer();
 		String me = myAnswer();
-		
-		if(me == comp){
+		String comp = getComputerAnswer();
+		///////////////////////////////////////
+		if(me.equals(comp)){
 			System.out.println("It's a tie!");
 		}
-		if(me == "Rock"){
-			if(comp == "Paper"){
+
+		/////////////////////////////////////////////////////
+		if(me.equals("Rock")){
+			if(comp.equals("Paper")){
 				System.out.println("Computer wins");
 			}
-			if(comp == "Scissors"){
+			if(comp.equals("Scissors")){
 				System.out.println("You won!");
 			}
+			return me;
 		}
-		if(me == "Paper"){
-			if(comp == "Rock"){
+
+		////////////////////////////////////////////////
+		if(me.equals("Paper")){
+			if(comp.equals("Rock")){
 				System.out.println("You won!");
 			}
-			if(comp == "Scissors"){
+			if(comp.equals("Scissors")){
 				System.out.println("Computer wins");
 			}
+			return me;
 		}
-		if(me == "Scissors"){
-			if(comp == "Rock"){
+		/////////////////////////////////////////////////
+		if(me.equals("Scissors")){
+			if(comp.equals("Rock")){
 				System.out.println("Computer wins");
 			}
-			if(comp == "Paper"){
+			if(comp.equals("Paper")){
 				System.out.println("You won!");
 			}
+			return me;
 		}
-		else{
-			System.out.println("You have entered a invalid input");
-		}
-		
-		String response = ("Computer answer: " + comp + "\n" + "Your answer: " + me);
+		/////////////////////////////////////////////////////////
+		String response = ("You typed a invaild input.");
 		return response;
 	}
 	
@@ -67,7 +74,7 @@ public class breakfastCerial {
 	public static void main(String[] args){
 		String play = gameLogic();
 	
-		System.out.println("Play: "+ play + "\n");
+		System.out.println(play);
 		
 	}
 
