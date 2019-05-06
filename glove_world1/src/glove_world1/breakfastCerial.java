@@ -32,6 +32,7 @@ public class breakfastCerial {
 		///////////////////////////////////////
 		if(me.equals(comp)){
 			System.out.println("It's a tie!");
+			return me;
 		}
 
 		/////////////////////////////////////////////////////
@@ -74,7 +75,6 @@ public class breakfastCerial {
 	public static void main(String[] args){
 		String play = gameLogic();
 	
-		System.out.println(play);
 		
 	}
 
