@@ -29,6 +29,7 @@ public class breakfastCerial {
 	public static String gameLogic(){
 		String me = myAnswer();
 		String comp = getComputerAnswer();
+		String response = ("You typed a invaild input.");
 		///////////////////////////////////////
 		if(me.equals(comp)){
 			System.out.println("It's a tie!");
@@ -67,7 +68,9 @@ public class breakfastCerial {
 			return me;
 		}
 		/////////////////////////////////////////////////////////
-		String response = ("You typed a invaild input.");
+		else{
+		return response;
+		}
 		return response;
 	}
 	
